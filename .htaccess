@@ -1,0 +1,13 @@
+
+RewriteOptions inherit
+
+# BEGIN Sitepad
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
+# END Sitepad
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^mbuswana\ Learning\ Center\ \/?(.*)$ "http\:\/\/mbuswanaLC\/$1" [R=301,L]
